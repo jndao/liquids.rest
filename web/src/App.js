@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { useColorScheme, useClipboard } from '@mantine/hooks';
-import { Button, Select } from '@mantine/core';
+import { Button, Select, Loader } from '@mantine/core';
 
 import axios from 'axios';
 
@@ -58,7 +58,7 @@ function App() {
 }
 
 function RequestForm() {
-  const clipboard = useClipboard({ timeout: 5000 });
+  const clipboard = useClipboard({ timeout: 2000 });
   
   const baseUrl = process.env.NODE_ENV === 'production' ? 'https://api.liquids.rest' : 'http://localhost:4000';
   
@@ -66,6 +66,7 @@ function RequestForm() {
   const [selectedType, setSelectedType] = useState(false);
   const [selectedDataResult, setSelectedDataResult] = useState();
   const [loading, setLoading] = useState(true);
+  const [loadingQuote, setLoadingQuote] = useState(false);
 
   useEffect(() => {
     const getTypes = async () => {
@@ -82,12 +83,14 @@ function RequestForm() {
   
   useEffect(() => {
     const getSelectedType = async () => {
+      setLoadingQuote(true);
       const response = await axios({
         method: 'get',
         url: baseUrl + '?type=' + selectedType
       })
       
       setSelectedDataResult(response.data.fact);
+      setLoadingQuote(false);
     }
     if (selectedType) {
       getSelectedType();
@@ -131,7 +134,7 @@ function RequestForm() {
             {clipboard.copied ? 'Copied' : baseUrl + '?type=' + selectedType}
           </Button>
           <span className='dataResult'>
-            "{selectedDataResult}"
+            {loadingQuote ? <Loader /> : selectedDataResult}
           </span>
         </div>
       </RequestFormWrapper>

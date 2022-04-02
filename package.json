@@ -1,0 +1,28 @@
+{
+  "name": "liquids.rest",
+  "version": "1.0.0",
+  "description": "A free API for random facts about random liquids💧",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lerna run build --parallel",
+    "dev": "lerna run dev --parallel",
+    "format": "lerna run format",
+    "lint": "lerna run lint",
+    "postinstall": "lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnddao/liquids.rest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnddao/liquids.rest/issues"
+  },
+  "homepage": "https://github.com/jnddao/liquids.rest#readme",
+  "dependencies": {
+    "lerna": "^4.0.0"
+  }
+}

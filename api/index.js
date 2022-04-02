@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
   if (dataHandler[type] && type) {
     res.status(200).send({
       // Selects random item from data type to return
-      data: dataHandler[type][Math.floor(Math.random()*dataHandler[type].length)],
+      fact: dataHandler[type][Math.floor(Math.random()*dataHandler[type].length)],
     });
   } else if (!type) {
     res.status(200).send({

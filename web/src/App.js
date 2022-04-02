@@ -21,7 +21,7 @@ function App() {
         <AppWrapper>
           <h1>🫗 Liquids Rest API</h1>
           <div className='caption'>
-            A rest api for random liquids.
+            A rest api for random facts about liquids.
             <br />
             <br />
             Made by
@@ -34,7 +34,8 @@ function App() {
               rel="noopener noreferrer"
             >
               John
-            </Button> and inspired by the
+            </Button> 
+            and inspired by the
             <Button 
               component='a'
               variant="subtle" 
@@ -44,7 +45,8 @@ function App() {
               rel="noopener noreferrer"
             >
               Kanye Rest Api
-            </Button>.
+            </Button>
+            .
           </div>
 
           <h2>Demo</h2> 
@@ -85,7 +87,7 @@ function RequestForm() {
         url: baseUrl + '?type=' + selectedType
       })
       
-      setSelectedDataResult(response.data.data);
+      setSelectedDataResult(response.data.fact);
     }
     if (selectedType) {
       getSelectedType();
@@ -104,7 +106,7 @@ function RequestForm() {
           component='a'
           variant="subtle" 
           compact 
-          href='https://kanye.rest' 
+          href={baseUrl}
           target="_blank"
           rel="noopener noreferrer"
         >

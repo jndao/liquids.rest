@@ -123,14 +123,13 @@ function RequestForm() {
           onChange={setTypeSelect}
         />
         <div className='outputTypeContainer'>
-          <div>
-            <Button 
-              color={clipboard.copied ? 'teal' : 'gray'} 
-              onClick={() => clipboard.copy(baseUrl + '?type=' + selectedType)}
-            >
-              {clipboard.copied ? 'Copied' : baseUrl + '?type=' + selectedType}
-            </Button>
-          </div>
+          Click below to copy request url
+          <Button 
+            color={clipboard.copied ? 'teal' : 'gray'} 
+            onClick={() => clipboard.copy(baseUrl + '?type=' + selectedType)}
+          >
+            {clipboard.copied ? 'Copied' : baseUrl + '?type=' + selectedType}
+          </Button>
           <span className='dataResult'>
             "{selectedDataResult}"
           </span>

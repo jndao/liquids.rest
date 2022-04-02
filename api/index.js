@@ -45,7 +45,6 @@ app.get('/', (req, res) => {
     });
   } else if (!type) {
     res.status(200).send({
-      files: dataHandler.getFileStructure(),
       types: dataHandler.getDataTypes(),
       message: 'Type not provided. Please specify a type from types.'
     })

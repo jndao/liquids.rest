@@ -30,13 +30,13 @@ To run this repository, do the following;
 
 * Clone this repository and navigate it's root folder
 * Run `npm install` and `npm run dev` to start the development server
-* Your frontend will be running at [http://localhost:3000] and the api will be at [http://localhost:4000]
+* Your frontend will be running at [http://localhost:3000](http://localhost:3000) and the api will be at [http://localhost:4000](http://localhost:4000)
 
 This project is currently deployed via Vercel and has been structured to work in that deployment method.
 
 ## Contributing
 
-Please open a pull request to add any new facts/types to this api.
+Please open a pull request to add any new facts/types/features to this repository. Any pull requests are welcome!
 
 ### Adding types
 

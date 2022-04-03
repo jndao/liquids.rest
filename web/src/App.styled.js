@@ -24,7 +24,8 @@ export const RequestFormWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 600px;
-
+  color: ${props => props.theme.white};
+  
   .outputTypeContainer {
     display: flex;
     align-items: center;

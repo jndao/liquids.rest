@@ -134,7 +134,7 @@ function RequestForm() {
             {clipboard.copied ? 'Copied' : baseUrl + '?type=' + selectedType}
           </Button>
           <span className='dataResult'>
-            {loadingQuote ? <Loader /> : selectedDataResult}
+            {loadingQuote ? <Loader /> : `"${selectedDataResult}"`}
           </span>
         </div>
       </RequestFormWrapper>

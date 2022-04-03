@@ -3,7 +3,8 @@ const universalTheme = {
 
   // colors
   grey: '#909296',
-  darkGrey: '#535454'
+  darkGrey: '#535454',
+  white: 'white',
 }
 
 export const darkTheme = {

@@ -119,6 +119,8 @@ function RequestForm() {
           label="Select your liquid type"
           placeholder={selectedType}
           data={types}
+          searchable
+          nothingFound='Liquid type not found'
           sx={{
             maxWidth: '400px',
             margin: '10px 0px',

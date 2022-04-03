@@ -9,7 +9,8 @@ const jsonsInDir = fs.readdirSync(path.join(__dirname)).filter(file => path.extn
 
 jsonsInDir.forEach(file => {
   const fileData = fs.readFileSync(path.join(__dirname, file));
-  module.exports[file.split('.')[0]] = JSON.parse(fileData.toString());
+  const fileContent = JSON.parse(fileData.toString());
+  module.exports[file.split('.')[0]] = fileContent;
 });
 
 module.exports.getDataTypes = getDataTypes = () => {

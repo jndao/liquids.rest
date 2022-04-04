@@ -19,7 +19,7 @@ function App() {
       <MantineProvider theme={{ colorScheme: (colorScheme === 'dark' ? 'dark' : 'light')}}>
         <GlobalStyle />
         <AppWrapper>
-          <h1>🫗 Liquids Rest API</h1>
+          <h1>Liquids Rest API</h1>
           <div className='caption'>
             A rest api for random facts about liquids.
             <br />
